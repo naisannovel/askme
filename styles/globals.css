@@ -1,26 +1,90 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700&display=swap');
+
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+body{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
 }
 
-* {
-  box-sizing: border-box;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.input-field{
+    @apply w-full py-2 px-6 rounded-3xl focus:outline-none focus:ring-2 text-lg border border-primary-color lg:placeholder:text-base placeholder:text-sm;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+.primary-btn{
+    @apply py-[8px] lg:px-[40px] px-[35px] rounded-3xl text-white lg:text-lg text-base uppercase duration-300 bg-primary-color hover:opacity-100 opacity-80 cursor-pointer z-50;
+}
+
+.secondary-btn{
+    @apply py-[8px] lg:px-[40px] px-[35px] rounded-3xl lg:text-base text-sm capitalize duration-300 hover:opacity-100 opacity-80 cursor-pointer z-50;
+}
+
+.triangle{
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.Parallelogram{
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+
+}
+
+.quiz-dynamic-step::after{
+    content: "";
+    position: absolute;
+    /* width: 0; */
+    height: 100%;
+    border-radius: 30px;
+    inset: 0;
+    background-color: #3EC65D;
+    transition: 1s;
+}
+
+.anim-bounce{
+    animation-name: bounce-custom;
+    animation-duration: 25s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes bounce-custom {
+    0%{
+        translate: 0 -100px;
+    }
+    50%{
+        translate: 0;
+    }
+    100%{
+        translate: -100px 0;
+    }
+}
+
+
+/* skeleton animation */
+
+.anim-shimmer{
+    animation-name: loading;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes loading{
+    0%{
+        translate: -250% 0;
+    }
+
+    100%{
+        translate: 250% 0;
+    }
 }
