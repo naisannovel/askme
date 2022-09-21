@@ -1,0 +1,276 @@
+{
+    "question": [
+        {
+            "id": 1,
+            "title": "Which one is not the way to apply loop?",
+            "options": [
+                {
+                    "id": 1,
+                    "item": "while-loop"
+                },
+                {
+                    "id": 2,
+                    "item": "do-while-loop"
+                },
+                {
+                    "id": 3,
+                    "item": "for-loop"
+                },
+                {
+                    "id": 4,
+                    "item": "with-loop"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "title": "What is the purpose of the split on a string?",
+            "options": [
+                {
+                    "id": 1,
+                    "item": "Slice string into two strings."
+                },
+                {
+                    "id": 2,
+                    "item": "Break a string into an array of substring"
+                },
+                {
+                    "id": 3,
+                    "item": "Speaks about string but I can’t hear it"
+                },
+                {
+                    "id": 4,
+                    "item": "I don't know"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "title": "Which property will you use to get number of characters in a string?",
+            "options": [
+                {
+                    "id": 1,
+                    "item": "Count"
+                },
+                {
+                    "id": 2,
+                    "item": "characters"
+                },
+                {
+                    "id": 3,
+                    "item": "Length"
+                },
+                {
+                    "id": 4,
+                    "item": "Distance"
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "title": "What is not true about arguments?",
+            "options": [
+                {
+                    "id": 1,
+                    "item": "You cannot use push to add elements to arguments"
+                },
+                {
+                    "id": 2,
+                    "item": "The arguments are not an array. It’s an array like object"
+                },
+                {
+                    "id": 3,
+                    "item": "You can access arguments outside of a function"
+                },
+                {
+                    "id": 4,
+                    "item": "You can access every parameters passed to the function"
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "title": "What are the benefits of event delegate?",
+            "options": [
+                {
+                    "id": 1,
+                    "item": "Attach events at the parent element"
+                },
+                {
+                    "id": 2,
+                    "item": "Less event handler setup (not adding events for child elements)"
+                },
+                {
+                    "id": 3,
+                    "item": "No need to setup event for newly added elements"
+                },
+                {
+                    "id": 4,
+                    "item": "All the above"
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "title": "What is the purpose of parseFloat?",
+            "options": [
+                {
+                    "id": 1,
+                    "item": "Convert string to a number"
+                },
+                {
+                    "id": 2,
+                    "item": "Floating a parse on the river"
+                },
+                {
+                    "id": 3,
+                    "item": "Convert number to a string"
+                },
+                {
+                    "id": 4,
+                    "item": "Convert Json to a string"
+                }
+            ]
+        },
+        {
+            "id": 7,
+            "title": "Which one option will convert the arguments to an array?",
+            "options": [
+                {
+                    "id": 1,
+                    "item": "[...arguments]"
+                },
+                {
+                    "id": 2,
+                    "item": "Array(arguments)"
+                },
+                {
+                    "id": 3,
+                    "item": "Arguments.map"
+                },
+                {
+                    "id": 4,
+                    "item": "convert.Arguments"
+                }
+            ]
+        },
+        {
+            "id": 8,
+            "title": "What status code will you get for a successful API call?",
+            "options": [
+                {
+                    "id": 1,
+                    "item": "403"
+                },
+                {
+                    "id": 2,
+                    "item": "200"
+                },
+                {
+                    "id": 3,
+                    "item": "500"
+                },
+                {
+                    "id": 4,
+                    "item": "404"
+                }
+            ]
+        },
+        {
+            "id": 9,
+            "title": "The behaviour of the instances present of a class inside a method is defined by __________?",
+            "options": [
+                {
+                    "id": 1,
+                    "item": "Method"
+                },
+                {
+                    "id": 2,
+                    "item": "Classes"
+                },
+                {
+                    "id": 3,
+                    "item": "Interfaces"
+                },
+                {
+                    "id": 4,
+                    "item": "Classes and Interfaces"
+                }
+            ]
+        },
+        {
+            "id": 10,
+            "title": "What does JavaScript return to you if you try to access an object's property that doesn't exist?",
+            "options": [
+                {
+                    "id": 1,
+                    "item": "null"
+                },
+                {
+                    "id": 2,
+                    "item": "error"
+                },
+                {
+                    "id": 3,
+                    "item": "0"
+                },
+                {
+                    "id": 4,
+                    "item": "undefined"
+                }
+            ]
+        }
+    ],
+    "answer": [
+        {
+            "id": 1,
+            "qid": 1,
+            "correct": 4
+        },
+        {
+            "id": 2,
+            "qid": 2,
+            "correct": 2
+        },
+        {
+            "id": 3,
+            "qid": 3,
+            "correct": 3
+        },
+        {
+            "id": 4,
+            "qid": 4,
+            "correct": 3
+        },
+        {
+            "id": 5,
+            "qid": 5,
+            "correct": 4
+        },
+        {
+            "id": 6,
+            "qid": 6,
+            "correct": 1
+        },
+        {
+            "id": 7,
+            "qid": 7,
+            "correct": 1
+        },
+        {
+            "id": 8,
+            "qid": 8,
+            "correct": 2
+        },
+        {
+            "id": 9,
+            "qid": 9,
+            "correct": 2
+        },
+        {
+            "id": 10,
+            "qid": 10,
+            "correct": 4
+        }
+    ]
+}

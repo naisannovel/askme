@@ -38,17 +38,6 @@ body{
 
 }
 
-.quiz-dynamic-step::after{
-    content: "";
-    position: absolute;
-    /* width: 0; */
-    height: 100%;
-    border-radius: 30px;
-    inset: 0;
-    background-color: #3EC65D;
-    transition: 1s;
-}
-
 .anim-bounce{
     animation-name: bounce-custom;
     animation-duration: 25s;
