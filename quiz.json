@@ -571,6 +571,94 @@
                     "item": "Neighbor components"
                 }
             ]
+        },
+        {
+            "id": 27,
+            "title": "How will you get data from axios?",
+            "options": [
+                {
+                    "id": 1,
+                    "item": "From data object of axios"
+                },
+                {
+                    "id": 2,
+                    "item": "From result object of axios"
+                },
+                {
+                    "id": 3,
+                    "item": "From response object of axios"
+                },
+                {
+                    "id": 4,
+                    "item": "From status object of axios"
+                }
+            ]
+        },
+        {
+            "id": 28,
+            "title": "Why will you need a router for your app?",
+            "options": [
+                {
+                    "id": 1,
+                    "item": "So that you can isolate component that doesn’t like each other"
+                },
+                {
+                    "id": 2,
+                    "item": "So that you can show a specific component based on the current route"
+                },
+                {
+                    "id": 3,
+                    "item": "It’s just the way you build roads and routes"
+                },
+                {
+                    "id": 4,
+                    "item": "All the above"
+                }
+            ]
+        },
+        {
+            "id": 29,
+            "title": "What is 404 to a web developer?",
+            "options": [
+                {
+                    "id": 1,
+                    "item": "The things that is smaller than 420"
+                },
+                {
+                    "id": 2,
+                    "item": "Files or paths that is not available"
+                },
+                {
+                    "id": 3,
+                    "item": "It’s just a number doesn’t have any meaning"
+                },
+                {
+                    "id": 4,
+                    "item": "All the above"
+                }
+            ]
+        },
+        {
+            "id": 30,
+            "title": "What are the different ways you can handle state in a React application?",
+            "options": [
+                {
+                    "id": 1,
+                    "item": "Context API"
+                },
+                {
+                    "id": 2,
+                    "item": "Context API"
+                },
+                {
+                    "id": 3,
+                    "item": "External state"
+                },
+                {
+                    "id": 4,
+                    "item": "All the above"
+                }
+            ]
         }
     ],
     "answer": [
@@ -622,6 +710,106 @@
         {
             "id": 10,
             "qid": 10,
+            "correct": 4
+        },
+        {
+            "id": 11,
+            "qid": 11,
+            "correct": 1
+        },
+        {
+            "id": 12,
+            "qid": 12,
+            "correct": 3
+        },
+        {
+            "id": 13,
+            "qid": 13,
+            "correct": 1
+        },
+        {
+            "id": 14,
+            "qid": 14,
+            "correct": 4
+        },
+        {
+            "id": 15,
+            "qid": 15,
+            "correct": 3
+        },
+        {
+            "id": 16,
+            "qid": 16,
+            "correct": 2
+        },
+        {
+            "id": 17,
+            "qid": 17,
+            "correct": 2
+        },
+        {
+            "id": 18,
+            "qid": 18,
+            "correct": 3
+        },
+        {
+            "id": 19,
+            "qid": 19,
+            "correct": 4
+        },
+        {
+            "id": 20,
+            "qid": 20,
+            "correct": 2
+        },
+        {
+            "id": 21,
+            "qid": 21,
+            "correct": 2
+        },
+        {
+            "id": 22,
+            "qid": 22,
+            "correct": 2
+        },
+        {
+            "id": 23,
+            "qid": 23,
+            "correct": 3
+        },
+        {
+            "id": 24,
+            "qid": 24,
+            "correct": 3
+        },
+        {
+            "id": 25,
+            "qid": 25,
+            "correct": 2
+        },
+        {
+            "id": 26,
+            "qid": 26,
+            "correct": 1
+        },
+        {
+            "id": 27,
+            "qid": 27,
+            "correct": 1
+        },
+        {
+            "id": 28,
+            "qid": 28,
+            "correct": 2
+        },
+        {
+            "id": 29,
+            "qid": 29,
+            "correct": 2
+        },
+        {
+            "id": 30,
+            "qid": 30,
             "correct": 4
         }
     ]
