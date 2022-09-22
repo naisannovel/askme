@@ -14,7 +14,7 @@ const QuizForm = ({ questions, quizNum, changeHandler }) => {
               name="checked"
               onChange={(e) => changeHandler(e)}
               checked={+questions[quizNum]?.checked === item?.id}
-              className="h-6 w-6"
+              className="h-6 w-6 shrink-0"
             />
             <span> {item?.item} </span>
           </label>

@@ -8,9 +8,9 @@ const useFetchQuestion = ( qnum ) => {
 
     useEffect(()=>{
         
-        const fetchQuestion = async () =>{
+        const fetchQuestion = async (randomNum) =>{
             setLoading(true);
-            const fetchQ = await axios.get(`https://askme-nn-default-rtdb.asia-southeast1.firebasedatabase.app/question/${qnum}.json`);
+            const fetchQ = await axios.get(`https://askme-nn-default-rtdb.asia-southeast1.firebasedatabase.app/question/${randomNum}.json`);
 
             if(fetchQ.status === 200 && fetchQ.data !== null){
                 setQuestions(prevState => [...prevState, fetchQ.data]);
@@ -18,8 +18,11 @@ const useFetchQuestion = ( qnum ) => {
             
             setLoading(false)
         }
+
         if(questions[qnum] === undefined){
-            fetchQuestion();
+            // generate random number
+            const randomNumber = Math.round(Math.random()*29);
+            fetchQuestion(randomNumber);
         }
 
     },[qnum])

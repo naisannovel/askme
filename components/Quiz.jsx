@@ -12,7 +12,6 @@ const Quiz = () => {
 
 
     const { loading, questions, setQuestions } = useFetchQuestion(quizNum);
-    console.log("🚀 ~ file: Quiz.jsx ~ line 14 ~ Quiz ~ questions", questions)
 
     const nextHandler = ()=>{
         if(quizNum < 10){
