@@ -3,16 +3,19 @@ import HomeGlassmorphism from './glassmorphism/HomeGlassmorphism';
 import { useForm } from "react-hook-form";
 import Input from './form/Input';
 import { useRouter } from 'next/router';
+import { useQuiz } from '../context/quizContext';
 
 const Home = () => {
 
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const router = useRouter();
 
+    const { setUser } = useQuiz();
+    
     const onSubmit = data => {
-        localStorage.setItem('user', JSON.stringify(data));
-        reset();
+        setUser(data);
         router.push('/quiz');
+        reset();
     };
 
     return (
