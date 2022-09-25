@@ -1,10 +1,11 @@
 import axios from 'axios';
 import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet';
 import Result from '../components/Result';
 import { useQuizContext } from '../context/quizContext';
 
-const result = () => {
+const ResultPage = () => {
 
     const [isAuthLoading, setIsAuthLoading] = useState(true);
     const [loading, setLoading] = useState(false);
@@ -24,7 +25,7 @@ const result = () => {
         setLoading(true)
 
         const fetchAns = async () =>{
-            const answer = await axios.get(`https://askme-nn-default-rtdb.asia-southeast1.firebasedatabase.app/answer.json`);
+            const answer = await axios.get(`${process.env.BASE_URL}/answer.json`);
 
             if(answer.status === 200 && answer.data !== null){
                 const correctAns = answer.data;
@@ -75,9 +76,12 @@ const result = () => {
 
     return (
         <div className='grid place-items-center min-h-screen w-full bg-slate-100'>
+            <Helmet>
+                <title>Askme - result</title>
+            </Helmet>
             <Result loading={loading} />
         </div>
     );
 };
 
-export default result;
+export default ResultPage;

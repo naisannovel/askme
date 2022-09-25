@@ -1,10 +1,16 @@
 import React from 'react';
 import Home from '../components/Home';
+import {Helmet} from "react-helmet";
 
-const index = () => {
+const HomePage = () => {
   return (
+    <>
+    <Helmet>
+      <title>Askme - home</title>
+    </Helmet>
     <Home/>
+    </>
   );
 };
 
-export default index;
+export default HomePage;

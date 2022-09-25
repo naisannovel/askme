@@ -12,7 +12,7 @@ const useFetchQuestion = ( qnum ) => {
         
         const fetchQuestion = async (randomNum) =>{
             setLoading(true);
-            const fetchQ = await axios.get(`https://askme-nn-default-rtdb.asia-southeast1.firebasedatabase.app/question/${randomNum}.json`);
+            const fetchQ = await axios.get(`${process.env.BASE_URL}/question/${randomNum}.json`);
 
             if(fetchQ.status === 200 && fetchQ.data !== null){
                 setQuizzes(prevState => [...prevState, fetchQ.data]);
