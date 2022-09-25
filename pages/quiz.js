@@ -1,14 +1,14 @@
 import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react';
 import Quiz from '../components/Quiz';
-import { useQuiz } from '../context/quizContext';
+import { useQuizContext } from '../context/quizContext';
 
 const quiz = () => {
 
     const router = useRouter();
     const [isAuthLoading, setIsAuthLoading] = useState(true);
 
-    const { user } = useQuiz();
+    const { user } = useQuizContext();
 
     useEffect(()=>{
         if(user === null){

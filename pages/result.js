@@ -2,16 +2,16 @@ import axios from 'axios';
 import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react';
 import Result from '../components/Result';
-import { useQuiz } from '../context/quizContext';
+import { useQuizContext } from '../context/quizContext';
 
 const result = () => {
 
     const [isAuthLoading, setIsAuthLoading] = useState(true);
     const [loading, setLoading] = useState(false);
     const router = useRouter();
-
-    const { quizzes, setQuizzes, setScore } = useQuiz();
-
+    
+    const { quizzes, setQuizzes, setScore, isFinish, setIsFinish } = useQuizContext();
+    
     useEffect(()=>{
         if(quizzes?.length != 10){
             router.push('/');
@@ -19,7 +19,7 @@ const result = () => {
             setIsAuthLoading(false)
         }
     },[router])
-
+    
     useEffect(()=>{
         setLoading(true)
 
@@ -42,10 +42,11 @@ const result = () => {
                             
                             if(correctAns[middle].correct === +quiz.checked){
                                 setScore(prevState => prevState + 1);
-                                const sampleAry = [...quizzes];
-                                sampleAry[index].correct = correctAns[middle].correct;
-                                setQuizzes(prevState => [...sampleAry]);
                             }
+
+                            const sampleAry = [...quizzes];
+                            sampleAry[index].correct = correctAns[middle].correct;
+                            setQuizzes(prevState => [...sampleAry]);
 
                             return;
                         }
@@ -58,14 +59,16 @@ const result = () => {
                     }
 
                 })
+                setIsFinish(true);
                 setLoading(false);
-            }else{
-                // if error occur
-                setLoading(false)
             }
         }
-
-        fetchAns();
+        
+        if(isFinish){
+            setLoading(false);
+        }else{
+            fetchAns()
+        }
     },[])
 
     if(isAuthLoading) return <p>Loading...</p>;

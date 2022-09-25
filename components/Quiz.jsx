@@ -3,7 +3,7 @@ import ProgressBar from './ProgressBar';
 import QuizSkeleton from './skeleton/QuizSkeleton';
 import useFetchQuestion from '../hooks/useFetchQuestion';
 import QuizForm from './QuizForm';
-import { useQuiz } from '../context/quizContext';
+import { useQuizContext } from '../context/quizContext';
 import { useRouter } from 'next/router';
 
 
@@ -12,10 +12,10 @@ const Quiz = () => {
     const [quizNum, setQuizNum] = useState(0);
     const router = useRouter();
 
-    const { loading, questions, setQuestions } = useFetchQuestion(quizNum);
-    const { setQuizzes } = useQuiz();
-
-
+    const { setQuizzes, quizzes } = useQuizContext();
+    const { loading } = useFetchQuestion(quizNum);
+    
+    
     const nextHandler = ()=>{
         if(quizNum < 10){
             setQuizNum(prevState => prevState + 1);
@@ -29,24 +29,23 @@ const Quiz = () => {
     }
 
     const changeHandler = (e) => {
-        setQuestions(prevState => {
+        setQuizzes(prevState => {
             prevState[quizNum].checked = e.target.value;
             return [...prevState];
         })
     }
 
     const submitHandler = () =>{
-        setQuizzes([...questions]);
         router.push('/result');
     }
-
-    const isDisabled = !questions[quizNum]?.checked && !+questions[quizNum]?.checked;
+    
+    const isDisabled = !quizzes[quizNum]?.checked && !+quizzes[quizNum]?.checked;
 
     return (
-        <div className='w-1/2 bg-white rounded-xl min-h-min py-6 my-20'>
+        <div className='lg:w-1/2 w-11/12 bg-white rounded-xl min-h-min py-6 my-20'>
             <ProgressBar quizNum={quizNum} />
 
-            { loading ? <QuizSkeleton/> : <QuizForm quizNum={quizNum} questions={questions} changeHandler={changeHandler} /> }
+            { loading ? <QuizSkeleton/> : <QuizForm quizNum={quizNum} quizzes={quizzes} changeHandler={changeHandler} /> }
 
             <div className='flex w-full justify-center gap-x-2'>
                 { quizNum+1 > 1 && <button  onClick={prevHandler} className='secondary-btn text-black border-2 border-primary-color'>Prev</button> }

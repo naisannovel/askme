@@ -6,7 +6,7 @@ const ProgressBar = ({ quizNum }) => {
             <div className="w-full h-[8px] rounded-[30px] bg-[#EBEDEF] overflow-hidden">
                 <div className="h-full bg-[#3EC65D]" style={{width: `calc(10%*${quizNum + 1})`, transition: '1s'}}></div>
             </div>
-            <div className='text-slate-400 text-sm flex items-center justify-between mt-2'>
+            <div className='text-slate-400 lg:text-sm text-xs flex items-center justify-between mt-2'>
                 <span>Quiz No {quizNum + 1} </span>
                 <span>Question { quizNum + 1 } out of 10</span>
             </div>

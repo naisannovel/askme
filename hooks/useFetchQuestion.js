@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { useQuizContext } from '../context/quizContext';
 
 const useFetchQuestion = ( qnum ) => {
 
     const [loading, setLoading] = useState(false);
-    const [questions, setQuestions] = useState([]);
-
+    // const [questions, setQuestions] = useState([]);
+    const { setQuizzes, quizzes } = useQuizContext();
+    
     useEffect(()=>{
         
         const fetchQuestion = async (randomNum) =>{
@@ -13,13 +15,13 @@ const useFetchQuestion = ( qnum ) => {
             const fetchQ = await axios.get(`https://askme-nn-default-rtdb.asia-southeast1.firebasedatabase.app/question/${randomNum}.json`);
 
             if(fetchQ.status === 200 && fetchQ.data !== null){
-                setQuestions(prevState => [...prevState, fetchQ.data]);
+                setQuizzes(prevState => [...prevState, fetchQ.data]);
             }
             
             setLoading(false)
         }
-
-        if(questions[qnum] === undefined){
+        
+        if(quizzes[qnum] === undefined){
             // generate random number
             const randomNumber = Math.round(Math.random()*29);
             fetchQuestion(randomNumber);
@@ -27,7 +29,7 @@ const useFetchQuestion = ( qnum ) => {
 
     },[qnum])
 
-    return { loading, questions, setQuestions };
+    return { loading };
 };
 
 export default useFetchQuestion;
