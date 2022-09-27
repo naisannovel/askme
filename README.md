@@ -4,9 +4,8 @@
 <br>
 <h2>Features</h2>
  <ul>
-   <li>user can see all blogs post</li>
-   <li>signup for write new blog</li>
-   <li>user can delete and update her blogs</li>
+   <li>Users may take the test here. New quizzes will be distributed at random each time.</li>
+   <li>After the test, the user can see their score. And the correct answers to quizzes.</li>
 </ul>
 <br>
  <h2>Technology</h2>
