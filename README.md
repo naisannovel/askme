@@ -1,4 +1,4 @@
-<h1>Askme</h1>
+<h1>Quizza</h1>
 <br>
 <a href="https://askme-nn.web.app/" target='_blank'>Preview</a>
 <br>
